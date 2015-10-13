@@ -7,7 +7,7 @@ OBJS = $(patsubst %.erl,$(OUTDIR)/%.beam,$(RCS))
 all:$(OBJS)
 	
 %.beam:%.erl
-	$(ECC) $^
+	$(ECC) -pa . $^
 
 clean: 
 	rm  *.beam
